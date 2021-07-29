@@ -1,0 +1,116 @@
+<app-header
+  [navbarBrandRouterLink]="['/dashboard']"
+  [fixed]="true"
+  [navbarBrandFull]="{
+    src: 'assets/img/pos/sibasi POS logo.png',
+    width: 90,
+    alt: 'Sibasi Dairy Farm'
+  }"
+  [navbarBrandMinimized]="{
+    src: 'assets/img/pos/sibasi POS emblem.png',
+    width: 50,
+    height: 60,
+    alt: 'Sibasi Dairy Farm'
+  }"
+  [sidebarToggler]="'lg'"
+  [asideMenuToggler]="''"
+>
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <!--<a class="nav-link" href="#">Dashboard</a>-->
+    </li>
+    <li class="nav-item px-3">
+      <!--<a class="nav-link" href="#">Users</a>-->
+    </li>
+    <li class="nav-item px-3">
+      <!--<a class="nav-link" href="#">Settings</a>-->
+    </li>
+  </ul>
+  <ul class="nav navbar-nav ml-auto">
+    <!-- <li class="nav-item d-md-down-none">
+      <a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a>
+    </li> -->
+    <li class="nav-item d-md-down-none">
+      <!--<a class="nav-link" href="#"><i class="icon-list"></i></a>-->
+    </li>
+    <li class="nav-item d-md-down-none">
+      <!--<a class="nav-link" href="#"><i class="icon-location-pin"></i></a>-->
+    </li>
+    <li class="nav-item dropdown" dropdown placement="bottom right">
+      <a
+        class="nav-link"
+        data-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+        dropdownToggle
+        (click)="(true)"
+      >
+        <!-- <img
+          src="assets/img/pos/sibasi POS emblem.png"
+          class="img-avatar"
+          alt="pos@sibasi.ltd"
+        /> -->
+      </a>
+      <div
+        class="dropdown-menu dropdown-menu-right"
+        *dropdownMenu
+        aria-labelledby="simple-dropdown"
+      >
+        <div class="dropdown-header text-left"><a href="#">My Account</a></div>
+        <!-- <div class="dropdown-item text-left">
+          <a href="#" (click)="logout()">Logout</a>
+        </div> -->
+        <div class="dropdown-item text-left">
+          <!-- <a routerLink="/organization/select" (click)="switchOrganization()"
+            >Switch Organization</a -->
+          >
+        </div>
+      </div>
+    </li>
+  </ul>
+</app-header>
+<div class="app-body">
+  <app-sidebar
+    #appSidebar
+    [fixed]="true"
+    [display]="'lg'"
+    [minimized]="sidebarMinimized"
+    (minimizedChange)="toggleMinimize($event)"
+  >
+    <app-sidebar-nav
+      [navItems]="navItems"
+      [perfectScrollbar]
+      [disabled]="appSidebar.minimized"
+    >
+    </app-sidebar-nav>
+    <app-sidebar-minimizer></app-sidebar-minimizer>
+  </app-sidebar>
+  <!-- Main content -->
+  <main class="main">
+    <cui-breadcrumb>
+      <!-- Breadcrumb Menu-->
+      <li class="breadcrumb-menu d-md-down-none">
+        <div
+          class="btn-group"
+          role="group"
+          aria-label="Button group with nested dropdown"
+        >
+        <span><i class="fa fa-home" aria-hidden="true"></i></span>
+
+        </div>
+      </li>
+    </cui-breadcrumb>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- /.container-fluid -->
+  </main>
+</div>
+<app-footer>
+  <span><a href="https://sibasi.com">Sibasi Ltd </a> &copy; 2021.</span>
+  <span class="ml-auto"
+    >Powered by <a href="https://sibasi.com">Sibasi</a></span
+  >
+</app-footer>

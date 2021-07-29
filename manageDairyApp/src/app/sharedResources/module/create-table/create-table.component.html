@@ -1,0 +1,27 @@
+<table class="table table-responsive-md">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <ng-container  *ngFor="let field of sibasiFarmModuleForm">
+          <th scope="col" *ngIf="field.isShowOnTable || isShowData">{{field?.displayedTableName}}</th>
+        </ng-container>
+    
+    </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let data of sibasiFarmData ; let ndx=index">
+        <td>{{ndx+1}}</td>
+        <ng-container  *ngFor="let field of sibasiFarmModuleForm">
+          <td  *ngIf="field.isShowOnTable || isShowData">
+            
+              {{data[field?.key]}}
+           
+          </td>
+        </ng-container>
+ 
+     
+      </tr>
+    </tbody>
+  
+    </table>
