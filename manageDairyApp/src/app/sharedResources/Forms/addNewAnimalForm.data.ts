@@ -3,10 +3,7 @@ import { SibasiFarmModuleForm } from "../models/farmModels.model";
 export const RegisterNewAnimalForm:SibasiFarmModuleForm={
 
   fields: [
-    {
-        className: 'section-label d-flex justify-content-center mt-3',
-        template: '<div><strong><h5>ANIMAL BASIC INFORMATION</strong><h5/></div> <hr />',
-      },
+   
     {
         
    
@@ -17,7 +14,7 @@ export const RegisterNewAnimalForm:SibasiFarmModuleForm={
           type: 'select',
           key: 'animalType',
           isShowOnTable: true,
-          displayedTableName:'Animal Type',
+          displayedTableName:'Type',
           templateOptions: {
             label: 'Select Animal Type',
             type:'text',
@@ -37,7 +34,7 @@ export const RegisterNewAnimalForm:SibasiFarmModuleForm={
             type: 'select',
             key: 'animalCategory',
             isShowOnTable: true,
-            displayedTableName:'Animal Category',
+            displayedTableName:'Category',
             templateOptions: {
               label: 'Select Animal Category',
               type:'text',
@@ -59,7 +56,7 @@ export const RegisterNewAnimalForm:SibasiFarmModuleForm={
             className: 'col-6 mt-3',
             type: 'select',
             key: 'location',
-            displayedTableName:'Animal Location',
+            displayedTableName:'Stall',
             isShowOnTable: true,
             templateOptions: {
               type:'text',
@@ -117,7 +114,7 @@ export const RegisterNewAnimalForm:SibasiFarmModuleForm={
             type: 'input',
             key: 'animalWeight',
             displayedTableName:'Animal Weight',
-            isShowOnTable: true,
+            isShowOnTable: false,
             templateOptions: {
               type:'text',
               label: 'Weight',
@@ -130,10 +127,7 @@ export const RegisterNewAnimalForm:SibasiFarmModuleForm={
       
       ],
     },
-    {
-        className: 'section-label d-flex justify-content-center mt-3',
-        template: '<div><h5><strong>ANIMAL ACQUISITION INFORMATION</strong><h5/></div> <hr />',
-      },
+  
     {
         fieldGroupClassName: "row",
         key:'animalAcquisitionProcess',
@@ -143,7 +137,7 @@ export const RegisterNewAnimalForm:SibasiFarmModuleForm={
                 type: 'textarea',
                 key: 'acquistationStatus',
                 displayedTableName:'Animal Status On Acquisition',
-                isShowOnTable: true,
+                isShowOnTable: false,
                 templateOptions: {
                     label:"Describe animal's status on acquisition",
                     placeholder: 'Comment on status of this animal on acquisition',
@@ -157,7 +151,7 @@ export const RegisterNewAnimalForm:SibasiFarmModuleForm={
                 type: 'select',
                 key: 'acquisition',
                 displayedTableName:'Acquisition',
-                isShowOnTable: false,
+                isShowOnTable: true,
                 templateOptions: {
                   type:'text',
                   label: 'How Did You Acquire The Animal',
@@ -181,7 +175,7 @@ export const RegisterNewAnimalForm:SibasiFarmModuleForm={
                 type: 'input',
                 key: 'inheritedWhen',
                 displayedTableName:'Inherited when',
-                isShowOnTable: true,
+                isShowOnTable: false,
                 templateOptions: {
                     label:"When did you inherit the animal",
                    type:'date'
@@ -243,7 +237,7 @@ export const RegisterNewAnimalForm:SibasiFarmModuleForm={
                 type: 'input',
                 key: 'dateOfBirth',
                 displayedTableName:'Date Of Birth',
-                isShowOnTable: true,
+                isShowOnTable: false,
                 templateOptions: {
                     label:"Date Of Birth",
                    type:'date'
@@ -328,7 +322,7 @@ export const RegisterNewAnimalForm:SibasiFarmModuleForm={
                 type: 'input',
                 key: 'boughtWhen',
                 displayedTableName:'Bought When',
-                isShowOnTable: true,
+                isShowOnTable: false,
                 templateOptions: {
                     label:"When Did You Buy?",
                    type:'date'

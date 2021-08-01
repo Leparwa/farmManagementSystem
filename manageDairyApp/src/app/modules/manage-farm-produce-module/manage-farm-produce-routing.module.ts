@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CollectFarmProductComponent } from './components/collect-farm-product/collect-farm-product.component';
 import { CollectedFarmProductsComponent } from './components/collected-farm-products/collected-farm-products.component';
-import { SearchSoldFarmProductsInvoiceComponent } from './components/search-sold-farm-products-invoice/search-sold-farm-products-invoice.component';
+import { FarmProductInvoiceComponent } from './components/farm-product-invoice/farm-product-invoice.component';
 import { SellFarmProductComponent } from './components/sell-farm-product/sell-farm-product.component';
+import { SoldProductsComponent } from './components/sold-products/sold-products.component';
 
 
 const routes: Routes = [
@@ -25,8 +26,12 @@ const routes: Routes = [
     component: SellFarmProductComponent,
   },
   {
+    path: "sold-product",
+    component: SoldProductsComponent,
+  },
+  {
     path: "product-invoice",
-    component: SearchSoldFarmProductsInvoiceComponent,
+    component: FarmProductInvoiceComponent,
   },
 ];
 

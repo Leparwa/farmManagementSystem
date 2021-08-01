@@ -139,12 +139,29 @@ export interface IProductType{
 }
 
 export interface IFarmProduct{
+  collectedProducts?:IFarmCollectedProducts[],
+  soldProducts?:IFarmSoldProduct[]
+}
+export interface IFarmCollectedProducts{
   collecterId:string
   collectedAt:string,
   animalType:IAnimalType,
   animalId:string,
   productType:IProductType,
   dateCollected?:Date,
+}
+export interface IFarmSoldProduct{
+  id:string,
+  productType:string,
+  buyerName:string,
+  buyerPhone:string,
+  buyerEmail?:string,
+  buyerAddress:string,
+  quantityBought:number,
+  pricePerQuantity:string,
+  amountPaid:number,
+  totalPrice:number,
+  balance:string
 }
 export interface IAnimalReprocuction{
   children:{
@@ -199,7 +216,25 @@ export interface IAnimalAcquisition{
   }
 }
 export interface IFarmAnimal{
-  animalID:string,
+  availableAnimals?:IFarmAvailableAnimal[]
+  soldAnimals:IFarmSoldAnimal[]
+}
+export interface IFarmSoldAnimal{
+  id?:string,
+  animalType:string,
+  animalID:string
+  buyerName:string,
+  buyerPhone:string,
+  buyerEmail?:string,
+  buyerAddress:string,
+  quantityBought:number,
+  pricePerQuantity:string,
+  amountPaid:number,
+  totalPrice:number,
+  balance:string
+}
+export interface IFarmAvailableAnimal{
+  animalID:string
   animalGender:string,
   animalWeight:string,
   animalCurrentValuation?:string

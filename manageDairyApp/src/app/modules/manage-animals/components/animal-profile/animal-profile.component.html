@@ -1,0 +1,78 @@
+<div class="container emp-profile">
+    <form method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Cow_female_black_white.jpg/1200px-Cow_female_black_white.jpg" alt=""/>
+                    <div class="file btn btn-lg btn-primary">
+                        Change Photo
+                        <input type="file" name="file"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                
+                <div class="profile-head">
+                    <div class="row w-100">
+                        <div class="col-md-4">
+                            <span>
+                                   
+                                <p><strong>Animal Type:  </strong><span>Cow</span></p> 
+                            </span>
+                            <span>
+                                   
+                                <p><strong>Tag ID:  </strong><span>SFA-C-092/2021</span></p> 
+                            </span>
+                            <p class=""><strong>Status</strong> : <span class="badge badge-warning">expectant</span></p>
+
+                        </div>
+                        <div class="col-md-8 w-100">
+                            <h5>
+                                <strong>GENERAL INFORMATION</strong>
+                            </h5>
+                            <div class="row w-100 d-flex justify-content-center">
+                                <div class="col-md-6">
+                                        <strong>Breed type</strong>: Fressian <hr class="mt-1 bg-primary">
+                                        <strong>Gender  </strong>: Female<hr class="mt-1 bg-primary"> 
+                                       <strong> Color</strong>: Black & white<hr class="mt-1 bg-primary">
+                                  
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Weight</strong>: 646 Kg<hr class="mt-1 bg-primary"> 
+                                    <strong>Age </strong>:   7 years <hr class="mt-1 bg-primary">
+                                   <strong> Animal Stall</strong>: stall-01/23 <hr class="mt-1 bg-primary">
+                                </div>
+                                
+                            </div>
+                         
+                        </div>
+                    </div>
+                           
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="home-tab"  data-toggle="tab" [routerLink]="['/manage-animal/profile/history']" role="tab"  aria-selected="true">History</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" [routerLink]="['/manage-animal/profile/medical-records']" role="tab" aria-selected="false">Medical Records</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" [routerLink]="['/manage-animal/profile/schedules']" role="tab"  aria-selected="false">Schedule</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" [routerLink]="['/manage-animal/profile/assessment']" role="tab"  aria-selected="false">Assessments</a>
+                                </li>
+                            </ul>
+                </div>
+            </div>
+         
+        </div>
+        <div class="row">
+           
+            <div class="col-md-12">
+               
+                    <router-outlet></router-outlet>
+                
+            </div>
+        </div>
+    </form>           
+</div>

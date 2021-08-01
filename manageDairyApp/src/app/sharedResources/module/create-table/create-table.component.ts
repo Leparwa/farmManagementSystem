@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SibasiFarmModuleForm } from '../../models/farmModels.model';
 
 @Component({
@@ -9,10 +9,14 @@ import { SibasiFarmModuleForm } from '../../models/farmModels.model';
 export class CreateTableComponent implements OnInit {
 @Input() sibasiFarmModuleForm:SibasiFarmModuleForm;
 @Input() sibasiFarmData:[]=[]
+@Input() isReciept:Boolean
+@Output() itemIndex = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
     console.log(this.sibasiFarmModuleForm)
   }
-
+  receipt(i){
+    this.itemIndex.emit(i)
+  }
 }

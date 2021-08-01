@@ -1,1 +1,21 @@
-<p>sell-farm-product works!</p>
+<div class="container-fluid">
+    <div class="card">
+      <div class="card-header">
+        <h5>
+          Collect Farm Product
+        </h5>
+      </div>
+      <div class="card-body">
+        <app-create-form
+        [form]="form"
+        [model]="model"
+        [fields]="fields"
+        (formModelChanges)="calculateTotalPrice($event)"
+        (submitModel)="sellProduct($event)"
+        >
+
+        </app-create-form>
+      </div>
+    </div>
+  </div>
+ 

@@ -26,6 +26,10 @@ export const routes: Routes = [
       {
         path: 'manage-farm',
         loadChildren: () => import('./modules/manage-farm-produce-module/manage-farm-produce.module').then(m => m.ManageFarmProduceModule)
+      },
+      {
+        path: 'manage-animal',
+        loadChildren: () => import('./modules/manage-animals/manage-animals.module').then(m => m.ManageAnimalsModule)
       }
     ]
   },

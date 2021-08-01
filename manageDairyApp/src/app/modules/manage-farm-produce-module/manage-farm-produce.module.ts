@@ -6,8 +6,9 @@ import { ManageFarmProduceRoutingModule } from './manage-farm-produce-routing.mo
 import { SharedModuleModule } from '../../sharedResources/module/shared-module.module';
 import { CollectFarmProductComponent } from './components/collect-farm-product/collect-farm-product.component';
 import { CollectedFarmProductsComponent } from './components/collected-farm-products/collected-farm-products.component';
-import { SearchSoldFarmProductsInvoiceComponent } from './components/search-sold-farm-products-invoice/search-sold-farm-products-invoice.component';
 import { SellFarmProductComponent } from './components/sell-farm-product/sell-farm-product.component';
+import { SoldProductsComponent } from './components/sold-products/sold-products.component';
+import { FarmProductInvoiceComponent } from './components/farm-product-invoice/farm-product-invoice.component';
 
 
 @NgModule({
@@ -15,8 +16,9 @@ import { SellFarmProductComponent } from './components/sell-farm-product/sell-fa
   
     CollectFarmProductComponent,
     CollectedFarmProductsComponent,
-    SearchSoldFarmProductsInvoiceComponent,
-    SellFarmProductComponent
+    SellFarmProductComponent,
+    SoldProductsComponent,
+    FarmProductInvoiceComponent
   ],
   imports: [
     CommonModule,

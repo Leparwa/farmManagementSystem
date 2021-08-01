@@ -1,25 +1,31 @@
-<table class="table table-responsive-md">
+
+
+<table class="table table-responsive-md w-100">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <ng-container  *ngFor="let field of sibasiFarmModuleForm">
-          <th scope="col" *ngIf="field.isShowOnTable || isShowData">{{field?.displayedTableName}}</th>
-        </ng-container>
-    
+        <th>#</th>
+          <ng-container  *ngFor="let field of sibasiFarmModuleForm">
+            <th *ngIf="field.isShowOnTable || isShowData">{{field?.displayedTableName}}</th>
+          </ng-container>
+       <th>actions</th>
     </tr>
     </thead>
   
     <tbody>
-      <tr *ngFor="let data of sibasiFarmData ; let ndx=index">
-        <td>{{ndx+1}}</td>
+      <tr *ngFor="let data of sibasiFarmData ; let i=index">
+        <td>{{i+1}}</td>
         <ng-container  *ngFor="let field of sibasiFarmModuleForm">
           <td  *ngIf="field.isShowOnTable || isShowData">
-            
               {{data[field?.key]}}
-           
           </td>
         </ng-container>
- 
+        <td>
+          <i class="fas fa-edit text-primary mr-2"></i>
+          <i class="fas fa-trash text-danger"></i>
+          <a *ngIf="isReciept" type="button" (click)="receipt(i)">
+            <i class="fas fa-file-invoice ml-2"></i>
+          </a>
+        </td>
      
       </tr>
     </tbody>

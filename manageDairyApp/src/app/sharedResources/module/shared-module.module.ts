@@ -6,6 +6,8 @@ import { FormlyModule } from '@ngx-formly/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { FormlyFieldFile } from '../fileUploadFormlyConfig/file-type.component';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -13,6 +15,8 @@ import { FormlyFieldFile } from '../fileUploadFormlyConfig/file-type.component';
   declarations: [
     CreateTableComponent,
     CreateFormComponent,
+    InvoiceComponent,
+    ProfileComponent,
     
   ],
   imports: [
@@ -28,7 +32,7 @@ import { FormlyFieldFile } from '../fileUploadFormlyConfig/file-type.component';
     FormlyBootstrapModule,
 
   ],
-  exports: [CreateTableComponent, CreateFormComponent]
+  exports: [CreateTableComponent, CreateFormComponent, InvoiceComponent, ProfileComponent]
 
 })
 export class SharedModuleModule { }

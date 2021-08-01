@@ -12,13 +12,20 @@ export class CreateFormComponent implements OnInit {
 @Input() model: {};
 @Input() fields: FormlyFieldConfig[];
 @Output() submitModel = new EventEmitter();
-options: FormlyFormOptions = {};
-
+@Output() formModelChanges = new EventEmitter()
+options: FormlyFormOptions = {
+  formState: {
+    awesomeIsForced: false,
+  },
+};
   constructor() { }
 
   ngOnInit(): void {
   }
   onSubmit(model: {}) {
     this.submitModel.emit(model);
+  }
+  total(model: {}){
+    this.formModelChanges.emit(model)
   }
 }

@@ -27,15 +27,15 @@ export const navItems: INavData[] = [
         icon: 'icon-list'
       },
       {
-        name: 'Sale Farm Product',
-        url: 'manage-farm/sale-product',
+        name: 'Sold Product',
+        url: 'manage-farm/sold-product',
         icon: 'icon-list'
       },
-      {
-        name: 'Product Invoice',
-        url: 'manage-farm/product-invoice',
-        icon: 'icon-list'
-      }
+     {
+       name:'Invoice',
+       url:'manage-farm/product-invoice',
+       icon:'icon-list'
+     }
     ]
   },
 
@@ -45,46 +45,25 @@ export const navItems: INavData[] = [
     children: [
     
       {
-        name: 'Manage Cows',
-        url: 'manageAnimals/animalsList',
+        name: 'Animals List',
+        url: 'manage-animal/animals-list',
+        icon: 'icon-list'
+      },
+     
+      {
+        name: 'Sold Animal',
+        url: 'manage-animal/sold-animals',
         icon: 'icon-list'
       },
       {
-        name: 'Manage Calves',
-        url: 'manageAnimals/manageCalves',
-        icon: 'icon-list'
-      },
-      {
-        name: 'Sell Animal',
-        url: 'manageAnimals/manageCalves',
+        name: 'Stalls',
+        url: 'manage-animal/add-stall',
         icon: 'icon-list'
       },
     ]
   },
  
-  {
-    name: 'Monitor Animals',
-    url: 'monitorAnimals/routineMonitor',
-    children: [
-    
-      {
-        name: 'Routine Monitor',
-        url: 'monitorAnimals/routineMonitor',
-        icon: 'icon-list'
-      },
-      {
-        name: 'Vaccine Monitor',
-        url: 'monitorAnimals/VaccinationMonitor',
-        icon: 'icon-list'
-      },
-      {
-        name: 'Pregnancy Monitor',
-        url: 'monitorAnimals/pregnancyMonitor',
-        icon: 'icon-list'
-      },
-     
-    ]
-  },
+  
 
   {
     name: 'Farm Inventory',
