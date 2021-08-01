@@ -14,9 +14,7 @@ import { AnimalSchedulesComponent } from './components/animal-schedules/animal-s
 import { AnimalAssesmentsComponent } from './components/animal-assesments/animal-assesments.component';
 import { SoldAnimalsComponent } from './components/sold-animals/sold-animals.component';
 import { AddStallComponent } from './components/add-stall/add-stall.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MultiSelectModule} from 'primeng/multiselect';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,11 +33,10 @@ import {MultiSelectModule} from 'primeng/multiselect';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     ManageAnimalsRoutingModule,
     ReactiveFormsModule,
     SharedModuleModule,
-    BrowserAnimationsModule,
-    MultiSelectModule
 
 
   ]

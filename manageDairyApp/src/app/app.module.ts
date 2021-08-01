@@ -45,7 +45,6 @@ import { FileValueAccessor } from './sharedResources/fileUploadFormlyConfig/file
     AppFooterModule,
     AppHeaderModule,
     AppSidebarModule,
-    
     PerfectScrollbarModule,
     FormlyModule.forRoot({
       types: [
