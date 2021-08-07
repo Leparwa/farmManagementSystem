@@ -1,33 +1,59 @@
-
-
-<table class="table table-responsive-md w-100">
-    <thead>
-      <tr>
-        <th>#</th>
-          <ng-container  *ngFor="let field of sibasiFarmModuleForm">
-            <th *ngIf="field.isShowOnTable || isShowData">{{field?.displayedTableName}}</th>
-          </ng-container>
-       <th>actions</th>
-    </tr>
-    </thead>
-  
-    <tbody>
-      <tr *ngFor="let data of sibasiFarmData ; let i=index">
-        <td>{{i+1}}</td>
+<div class="table-responsive w-100">
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
         <ng-container  *ngFor="let field of sibasiFarmModuleForm">
-          <td  *ngIf="field.isShowOnTable || isShowData">
-              {{data[field?.key]}}
-          </td>
+          <th *ngIf="field.isShowOnTable || isShowData">{{field?.displayedTableName}}</th>
         </ng-container>
-        <td>
-          <i class="fas fa-edit text-primary mr-2"></i>
-          <i class="fas fa-trash text-danger"></i>
-          <a *ngIf="isReciept" type="button" (click)="receipt(i)">
-            <i class="fas fa-file-invoice ml-2"></i>
-          </a>
+     <th>actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let data of sibasiFarmData ; let i=index">
+      <td>{{i+1}}</td>
+      <ng-container  *ngFor="let field of sibasiFarmModuleForm">
+        <td  *ngIf="field.isShowOnTable || isShowData">
+          <ng-container *ngIf="field?.key==='status'; else elseNot">
+            <span class="badge badge-warning">
+              {{data[field?.key]}}
+              </span>
+          </ng-container>
+          <ng-template #elseNot>
+          {{data[field?.key]}}
+          </ng-template> 
         </td>
-     
-      </tr>
-    </tbody>
+      </ng-container>
+    
+      <td>
+        <div class="dropdown dropstart">
+          <button type="button"
+           class="btn btn-sm shadow"
+           id="buttonDropDown" data-bs-toggle="dropdown" 
+           aria-expanded="false"
+           style="width: auto; height: auto; border-radius: 50%; 
+           background-color: rgb(235, 57, 12);"
+           >
+             <i class="fas fa-cog text-white"> </i>
+               </button>
+               <ul class="dropdown-menu shadow border" aria-labelledby="buttonDropDown" 
+               style='background-color: rgb(197, 245, 185); 
+                color: black;'>
+              <li *ngFor="let tableAction of sibasiTableActions">
+              <a class="dropdown-item" type="button" (click)="emitTableIndex(i)">
+                 <i [ngClass]="tableAction?.icon"></i> 
+                 <strong>
+                  {{tableAction?.actionName}}
+                 </strong>
+            </a>
+          </li>
+         </ul>
+       </div>
+      </td>
+    </tr>
+  </tbody>
+
+  </table>
   
-    </table>
+</div>

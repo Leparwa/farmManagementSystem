@@ -233,6 +233,11 @@ export interface IFarmSoldAnimal{
   totalPrice:number,
   balance:string
 }
+export interface IFarmStalls{
+  stall_number:string,
+  stall_status:string,
+  stall_animals?:IFarmAvailableAnimal
+}
 export interface IFarmAvailableAnimal{
   animalID:string
   animalGender:string,

@@ -1,0 +1,31 @@
+  <div class="card  d-flex justify-content-center">
+    <div class="card-header">
+      <h5>Create A New Stall</h5>
+    </div>
+    <div class="card-body">
+
+<form class="row" [formGroup]="farmStallForm">
+  <div class="col-6">
+    <label for="stallNumber" class="visually-hidden">Stall Number</label>
+    <input type="text" formControlName="stall_number" class="form-control">
+  </div>
+  <div class="col-6">
+    <label for="stall_status" class="visually-hidden">Stall Status</label>
+    <select class="form-control"  formControlName="stall_status">
+      <option selected>select stall status</option>
+      <option value="full">full</option>
+      <option value="empty">empty</option>
+      <option value="under repair">under repair</option>
+    </select>
+  </div>
+  <div class="col-12 mt-3">
+    <div>
+      <label for="animals" class="visually-hidden">Animals</label>
+    </div>
+    <p-multiSelect [options]="animals"  [(ngModel)]="selectedAnimals" optionLabel="animalId" display="chip" formControlName="stall_animals"></p-multiSelect> 
+  </div>
+</form>
+<button (click)="addStall()" class="btn btn-success mt-3 mr-2 float-right" [disabled]="!farmStallForm.valid">Submit</button>
+ </div>
+ </div>
+

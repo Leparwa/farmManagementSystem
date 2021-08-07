@@ -39,7 +39,5 @@ export class SoldProductsComponent implements OnInit {
   }
   viewReceipt(itemIndex:any){
     this.router.navigate(['/manage-farm/product-invoice'], { queryParams: { product: `${itemIndex}` } });
-
-    console.log(itemIndex)
   }
 }

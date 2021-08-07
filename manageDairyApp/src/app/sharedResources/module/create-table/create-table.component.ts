@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SibasiFarmModuleForm } from '../../models/farmModels.model';
+import { IFarmTablActions } from '../../models/tableActions.model';
 
 @Component({
   selector: 'app-create-table',
@@ -10,13 +11,14 @@ export class CreateTableComponent implements OnInit {
 @Input() sibasiFarmModuleForm:SibasiFarmModuleForm;
 @Input() sibasiFarmData:[]=[]
 @Input() isReciept:Boolean
+@Input() sibasiTableActions:{}[]=[]
 @Output() itemIndex = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.sibasiFarmModuleForm)
+  
   }
-  receipt(i){
+  emitTableIndex(i){
     this.itemIndex.emit(i)
   }
 }

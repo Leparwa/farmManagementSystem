@@ -7,58 +7,61 @@ export const navItems: INavData[] = [
   },
 
   {
-    name: 'Manage Farm Produce',
-    url: '/dashboard',
-    // icon: 'icon-apps-settings',
-    // badge: {
-    //   variant: 'info',
-    //   text: 'milk'
-    // },
+  
+    name: 'Farm Products',
+    url: 'manage-farm/collected-products',
+   icon:'icon-bag',
     children:[
    
       {
         name: 'Collected Products',
         url: 'manage-farm/collected-products',
-        icon: 'icon-list'
+        icon: 'icon-basket-loaded'
       },
-      {
-        name: 'Collect Product',
-        url: 'manage-farm/collect-product',
-        icon: 'icon-list'
-      },
+    
       {
         name: 'Sold Product',
         url: 'manage-farm/sold-product',
-        icon: 'icon-list'
+        icon: 'icon-options-vertical'
       },
      {
        name:'Invoice',
        url:'manage-farm/product-invoice',
-       icon:'icon-list'
+       icon:'icon-docs'
      }
     ]
   },
 
   {
-    name: 'Manage Animals',
+    name: 'Manage Farm',
     url: 'manageAnimals/animalsList',
+    icon:'icon-settings',
     children: [
     
       {
-        name: 'Animals List',
+        name: 'Farm Animals',
         url: 'manage-animal/animals-list',
-        icon: 'icon-list'
+        icon: 'icon-list',
+
+        children:[
+          {
+            name: 'All Animals',
+            url: 'manage-animal/animals-list',
+            icon: 'icon-plus',
+          },
+          {
+            name: 'Sold Animal',
+            url: 'manage-animal/sold-animals',
+            icon:'icon-close',
+          }
+        ]
       },
      
+    
       {
-        name: 'Sold Animal',
-        url: 'manage-animal/sold-animals',
-        icon: 'icon-list'
-      },
-      {
-        name: 'Stalls',
-        url: 'manage-animal/add-stall',
-        icon: 'icon-list'
+        name: 'Farm Stalls',
+        url: 'manage-animal/farm-stalls',
+        icon: 'icon-bag'
       },
     ]
   },
@@ -68,29 +71,29 @@ export const navItems: INavData[] = [
   {
     name: 'Farm Inventory',
     url: 'inventory/animal-feeds',
+    icon:'icon-wrench',
     children: [
-    
       {
-        name: 'Animal feeds',
-        url: 'inventory/animal-feeds',
-        icon: 'icon-list'
+        name: 'Farm Assets',
+        url: 'inventory/farm-assets',
+        icon: 'icon-layers'
       },
       {
-        name: 'Animal medicines',
-        url: 'inventory/animal-medicines',
-        icon: 'icon-list'
+        name: 'Farm Inputs',
+        url: 'inventory/farm-inputs',
+        icon: 'icon-grid'
       },
       {
-        name: 'Farm Tools',
+        name: 'Farm Purchases',
         url: 'inventory/farm-tools',
-        icon: 'icon-list'
+        icon:'icon-puzzle',
       },
     ]
   },
   {
     name: 'Farm Reports',
     url: 'Reports/farm-expenses',
-
+    icon:'icon-chart',
     children: [
     
       {
