@@ -1,6 +1,6 @@
 ///
 
-import { IFarmProduct, IFarmSoldProduct, IFarmCollectedProducts, IFarmAnimal, IFarmStalls } from "../models/farmModels.model";
+import { IFarmProduct, IFarmSoldProduct, IFarmCollectedProducts, IFarmAnimal, IFarmStalls, IFarmStaff } from "../models/farmModels.model";
 
   
 export const farmProducts:IFarmProduct={
@@ -17,6 +17,7 @@ export const farmAnimals:IFarmAnimal={
 }
 export const farmStalls:IFarmStalls[]=[]
 
+export const farmEmployees:IFarmStaff[]=[]
 
     
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IFarmAsset } from '../../../../sharedResources/models/farmAssets.model';
 import { farmAssetBasicForm } from '../../../../sharedResources/Forms/farmAssetForms/farmAssetBasicInfoForm.data';
-import { FarmAssetsService } from '../../service/farm-assets.service';
+import { FarmInventoryService } from '../../service/farm-inventory.service';
 import { IFarmTablActions } from '../../../../sharedResources/models/tableActions.model';
 import { farmAssetTableActions } from '../../../../sharedResources/Sample Data/farmTableActions.data';
 
@@ -15,7 +15,7 @@ export class FarmAssetsComponent implements OnInit {
   farmAssets:IFarmAsset[]=[]
   assetsTableActions:IFarmTablActions[]=[]
   constructor(
-    private farmAssetsService:FarmAssetsService
+    private farmAssetsService:FarmInventoryService
   ) { }
 
   ngOnInit(): void {

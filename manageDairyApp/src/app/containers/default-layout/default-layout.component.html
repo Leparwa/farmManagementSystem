@@ -1,4 +1,5 @@
 <app-header
+style="background-color:lightgoldenrodyellow"
   [navbarBrandRouterLink]="['/dashboard']"
   [fixed]="true"
   [navbarBrandFull]="{
@@ -78,6 +79,7 @@
     [display]="'lg'"
     [minimized]="sidebarMinimized"
     (minimizedChange)="toggleMinimize($event)"
+    style="background-color: rgb(42, 49, 3);"
   >
     <app-sidebar-nav
       [navItems]="navItems"
@@ -109,8 +111,8 @@
   </main>
 </div>
 <app-footer>
-  <span><a href="https://sibasi.com">Sibasi Ltd </a> &copy; 2021.</span>
+  <span><a href="https://sibasi.com">manage farm </a> &copy; 2021.</span>
   <span class="ml-auto"
-    >Powered by <a href="https://sibasi.com">Sibasi</a></span
+    >Powered by <a href="https://sibasi.com">leresi leparwa</a></span
   >
 </app-footer>

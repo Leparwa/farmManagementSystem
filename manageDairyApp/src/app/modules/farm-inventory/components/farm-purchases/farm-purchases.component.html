@@ -1,1 +1,27 @@
-<p>order-animal-feeds works!</p>
+    <div class="card w-100">
+      <div class="card-header bg-white">
+        <div class="col-md-12 col-sm-12">
+          <h5 class="float-left col-sm-6">
+            {{title}}
+          </h5>
+          <span *ngIf="isContinue" class="col-sm-6">
+            <p class="float-right "><strong>Status</strong>: <span class="badge badge-danger">{{purchaseInProgres?.status?.progress}}</span></p>
+            <p class="float-right mr-5"><strong>Order ID</strong>: <span class="badge badge-danger"><strong>{{purchaseInProgres?.purchaseId}}</strong></span></p>
+          </span>
+        </div>
+      </div>
+      <div class="card-body w-100">
+        <app-create-form *ngIf="!isShowVendors"
+        [form]="form"
+        [model]="model"
+        [fields]="fields"
+        (formModelChanges) ="getModelChages($vent)"
+        (submitModel)="newPurchase($event)"
+        >
+        </app-create-form>
+       <div *ngIf="isShowVendors">
+         <h1>List of vendors</h1>
+        <app-receive-animal-feeds [purchaseInProgress]="purchaseInProgres"></app-receive-animal-feeds>
+       </div>
+      </div>
+    </div>

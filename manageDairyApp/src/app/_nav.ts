@@ -85,52 +85,52 @@ export const navItems: INavData[] = [
       },
       {
         name: 'Farm Purchases',
-        url: 'inventory/farm-tools',
+        url: 'inventory/new-purchase',
         icon:'icon-puzzle',
       },
     ]
   },
-  {
-    name: 'Farm Reports',
-    url: 'Reports/farm-expenses',
-    icon:'icon-chart',
-    children: [
+  // {
+  //   name: 'Farm Reports',
+  //   url: 'Reports/farm-expenses',
+  //   icon:'icon-chart',
+  //   children: [
     
-      {
-        name: 'Farm Expense Report',
-        url: 'Reports/farm-expenses',
-        icon: 'icon-list'
-      },
-      {
-        name: 'Milk Collection Report',
-        url: 'Reports/milk-collection',
-        icon: 'icon-list'
-      },
-      {
-        name: 'Milk Sell Report',
-        url: 'Reports/milk-sells',
-        icon: 'icon-list'
-      },
-      {
-        name: 'Vaccine Monitor',
-        url: 'farmer/animal-vaccination',
-        icon: 'icon-list'
-      },
-      {
-        name: 'Vaccine Anticipation',
-        url: 'Reports/vaccination-anticipation',
-        icon: 'icon-list'
-      },
-      {
-        name: 'Animal Sale Report',
-        url: 'Reports/animal-sale',
-        icon: 'icon-list'
-      },
-      {
-        name: 'Animals Statistic',
-        url: 'Reports/animal-statistics',
-        icon: 'icon-list'
-      },
-    ]
-  },
+  //     {
+  //       name: 'Farm Expense Report',
+  //       url: 'Reports/farm-expenses',
+  //       icon: 'icon-list'
+  //     },
+  //     {
+  //       name: 'Milk Collection Report',
+  //       url: 'Reports/milk-collection',
+  //       icon: 'icon-list'
+  //     },
+  //     {
+  //       name: 'Milk Sell Report',
+  //       url: 'Reports/milk-sells',
+  //       icon: 'icon-list'
+  //     },
+  //     {
+  //       name: 'Vaccine Monitor',
+  //       url: 'farmer/animal-vaccination',
+  //       icon: 'icon-list'
+  //     },
+  //     {
+  //       name: 'Vaccine Anticipation',
+  //       url: 'Reports/vaccination-anticipation',
+  //       icon: 'icon-list'
+  //     },
+  //     {
+  //       name: 'Animal Sale Report',
+  //       url: 'Reports/animal-sale',
+  //       icon: 'icon-list'
+  //     },
+  //     {
+  //       name: 'Animals Statistic',
+  //       url: 'Reports/animal-statistics',
+  //       icon: 'icon-list'
+  //     },
+  //   ]
+  // },
 ];

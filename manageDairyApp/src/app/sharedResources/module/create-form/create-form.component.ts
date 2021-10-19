@@ -25,7 +25,7 @@ options: FormlyFormOptions = {
   onSubmit(model: {}) {
     this.submitModel.emit(model);
   }
-  total(model: {}){
+  modelChanges(model: {}){
     this.formModelChanges.emit(model)
   }
 }

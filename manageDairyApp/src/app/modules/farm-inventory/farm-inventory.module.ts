@@ -10,6 +10,8 @@ import { AddFarmAssetComponent } from './components/add-farm-asset/add-farm-asse
 import { UseFarmAssetComponent } from './components/use-farm-asset/use-farm-asset.component';
 import { SharedModuleModule } from '../../sharedResources/module/shared-module.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FarmInputsComponent } from './components/farm-inputs/farm-inputs.component';
+import { AddFarmInputsComponent } from './components/add-farm-inputs/add-farm-inputs.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReceiveAnimalFeedsComponent,
     FarmAssetsComponent,
     AddFarmAssetComponent,
-    UseFarmAssetComponent
+    UseFarmAssetComponent,
+    FarmInputsComponent,
+    AddFarmInputsComponent
   ],
   imports: [
     CommonModule,

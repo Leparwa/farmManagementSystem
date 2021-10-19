@@ -3,7 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { FormlyFieldConfig } from '@ngx-formly/core';
 import { IFarmAsset } from '../../../../sharedResources/models/farmAssets.model';
 import { farmAssetBasicForm } from '../../../../sharedResources/Forms/farmAssetForms/farmAssetBasicInfoForm.data';
-import { FarmAssetsService } from '../../service/farm-assets.service';
+import { FarmInventoryService } from '../../service/farm-inventory.service';
 
 @Component({
   selector: 'app-add-farm-asset',
@@ -15,7 +15,7 @@ export class AddFarmAssetComponent implements OnInit {
   model:any = {};
   fields: FormlyFieldConfig[] = [];
   constructor(
-    private farmAssetsService:FarmAssetsService
+    private farmAssetsService:FarmInventoryService
   ) { }
 
   ngOnInit(): void {

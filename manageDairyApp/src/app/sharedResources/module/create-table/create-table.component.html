@@ -1,3 +1,4 @@
+
 <div class="table-responsive w-100">
 <table class="table">
   <thead>
@@ -19,41 +20,28 @@
             <span class="badge badge-warning">
               {{data[field?.key]}}
               </span>
-          </ng-container>
+           </ng-container>
           <ng-template #elseNot>
-          {{data[field?.key]}}
+              {{data[field?.key]}}
           </ng-template> 
         </td>
       </ng-container>
-    
       <td>
-        <div class="dropdown dropstart">
-          <button type="button"
-           class="btn btn-sm shadow"
-           id="buttonDropDown" data-bs-toggle="dropdown" 
-           aria-expanded="false"
-           style="width: auto; height: auto; border-radius: 50%; 
-           background-color: rgb(235, 57, 12);"
-           >
-             <i class="fas fa-cog text-white"> </i>
-               </button>
-               <ul class="dropdown-menu shadow border" aria-labelledby="buttonDropDown" 
-               style='background-color: rgb(197, 245, 185); 
-                color: black;'>
-              <li *ngFor="let tableAction of sibasiTableActions">
-              <a class="dropdown-item" type="button" (click)="emitTableIndex(i)">
-                 <i [ngClass]="tableAction?.icon"></i> 
-                 <strong>
-                  {{tableAction?.actionName}}
-                 </strong>
-            </a>
-          </li>
-         </ul>
-       </div>
+          <div class="dropdown dropend ml-4">
+            <button type="button" class="btn btn-sm shadow buttonStyleDropdown"id="buttonDropDown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-cog text-white"> </i>
+                  </button>
+                   <ul class="dropdown-menu  shadow border" aria-labelledby="buttonDropDown">
+                      <li *ngFor="let tableAction of sibasiTableActions">
+                        <a class="dropdown-item" type="button" (click)="emitDataIndex(i, tableAction.action)">
+                    <i [ngClass]="tableAction?.icon"></i> 
+                   <strong> {{tableAction?.actionName}}</strong>
+                </a>
+            </li>
+          </ul>
+        </div>
       </td>
-    </tr>
+     </tr>
   </tbody>
-
-  </table>
-  
+  </table> 
 </div>

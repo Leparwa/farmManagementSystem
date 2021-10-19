@@ -18,7 +18,11 @@ export class CreateTableComponent implements OnInit {
   ngOnInit(): void {
   
   }
-  emitTableIndex(i){
-    this.itemIndex.emit(i)
+  emitDataIndex(i, action){
+    let emittedData ={
+      index: `${i}`,
+      action:`${action}`
+    }
+    this.itemIndex.emit(emittedData)
   }
 }
