@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="card">
+      <div class="card-header">
+        <h5>
+          Add New Animal To The Farm
+        </h5>
+      </div>
+      <div class="card-body">
+        <app-create-form
+        [form]="form"
+        [model]="model"
+        [fields]="fields"
+        (submitModel)="addAnimal($event)"
+        >
+
+        </app-create-form>
+      </div>
+    </div>
+  </div>
+ 

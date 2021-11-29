@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-12 col-sm-8">
+   <div class="card w-100">
+       <div class="card-header">
+           <div class="row d-flex justify-content-center w-100">
+              <div class="col-md-8 col-sm-6 w-100">
+               <div class="row">
+                   <div class="col-md-12">
+
+               <h5>Animals In The Farm</h5> 
+               
+
+                   </div>
+                   
+               </div>
+              </div>
+              <div class="col-md-4 col-sm-6w-100">
+               <a [routerLink]="['/manage-animal/new-animal']" type="button" class="btn btn-success btn-sm float-right" [state]="{tracingId: 123}">
+                   + new animal
+                 </a>
+             
+              </div>
+           </div>
+       </div>
+       <div class="card-body">
+          <div class="row mb-4 ml-3">
+              <div class="col-md-8">
+               <div>
+                   <input type="text" class="form-control search" [(ngModel)]="search"  
+                   placeholder="Search..."> 
+           </div>
+              </div>
+           <div class="col-4">
+              
+               <select class="form-control search">
+                   <option value="" disabled selected>Select Animal Type...</option>
+                   <option data-icon="fas fa-meat">Cow</option>
+                   <option data-icon="fas fa-meat">Sheep</option>
+                   <option data-icon="fas fa-meat">Pig</option>
+
+               </select>
+                 
+             </div>
+          </div>
+           <div class="col-sm-12">
+               <app-create-table [sibasiFarmModuleForm]="registerAnimalForm" [sibasiFarmData]="farmAnimals"></app-create-table>
+           </div>
+       </div>
+   </div>
+    </div>
+</div>
